@@ -94,10 +94,7 @@ section {
 }
 
 
-#menu ul{
-   text-align: center;
-   padding: 0;
-}
+
 
 .destaques li {
    width: 60%;
@@ -136,7 +133,7 @@ table {
    background-color: #ddd;
    margin: 0 5%;
    width: 90%;
-   
+
 }
 
 form fieldset {
@@ -159,7 +156,7 @@ form textarea {
 }
 
 form div {
-   width: 48%;
+   width: 98%;
    margin: 0 1%;
    height: 180px;
    float: left;
@@ -184,6 +181,10 @@ button {
    text-align: center;
 }
 
+#rodape p {
+   text-align: center;
+}
+
 #rodape li {
    display: inline;
 }
@@ -194,7 +195,7 @@ section ul li img {
    padding: 0;
 }
 
-.destaques h2{
+.destaques h2 {
    padding-left: 5%;
 }
 
@@ -203,8 +204,79 @@ p {
    margin: 0 2% 0 2%;
 }
 
-.sobre h1, .sobre h3{
+.sobre h1,
+.sobre h3 {
    margin-left: 1%;
+}
+
+/* Menu escorrido */
+
+.navbar {
+   overflow: hidden;
+   background-color: #333;
+   padding: 0;
+}
+
+.navbar a {
+   
+   font-size: 16px;
+   color: white;
+   text-align: center;
+   padding: 20px 22px;
+   text-decoration: none;
+}
+
+.dropdown {
+   float: left;
+   overflow: hidden;
+}
+
+.dropdown .dropbtn {
+   cursor: pointer;
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 14px 16px;
+   background-color: inherit;
+   font-family: inherit;
+   margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+   background-color: red;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.dropdown-content a {
+   float: none;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
+
+.dropdown-content a:hover {
+   background-color: #ddd;
+}
+
+.show {
+   display: block;
+}
+
+.navbar-retirar{
+   display: none;
 }
 
 @media (min-width: 576px) {
@@ -219,10 +291,27 @@ p {
       display: inline-block;
 
    }
+
+   .navbar-retirar{
+      display: none;
+   }
+
+   .navbar{
+      padding: 0;
+     
+   }
+
+   form div {
+      width: 98%;
+      margin: 0 1%;
+      height: 180px;
+      float: left;
+   }
+
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
    .destaques li {
       width: 31%;
@@ -233,6 +322,29 @@ p {
       margin: 0 1.15%;
       display: inline-block;
 
+   }
+
+   .navbar-retirar{
+      display:block;
+      
+   }
+
+   .navbar {
+      overflow: hidden;
+      background-color: #333;
+      padding: 12px 0;
+      text-align: center;
+   }
+
+   .dropdown{
+      display: none;
+   }
+
+   form div {
+      width: 98%;
+      margin: 0 1%;
+      height: 180px;
+      float: left;
    }
 }
 
@@ -248,6 +360,13 @@ p {
       margin: 0 1%;
       display: inline-block;
 
+   }
+
+   form div {
+      width: 48%;
+      margin: 0 1%;
+      height: 180px;
+      float: left;
    }
 }
 
